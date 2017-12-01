@@ -1,7 +1,7 @@
 #reader(lib"read.ss""wxme")WXME0108 ## 
 #|
    This file uses the GRacket editor format.
-   Open this file in DrRacket version 6.3 or later to read it.
+   Open this file in DrRacket version 6.9 or later to read it.
 
    Most likely, it was created by saving a program in DrRacket,
    and it probably contains a program with non-text elements
@@ -9,12 +9,17 @@
 
             http://racket-lang.org/
 |#
- 32 7 #"wxtext\0"
+ 33 7 #"wxtext\0"
 3 1 6 #"wxtab\0"
 1 1 8 #"wximage\0"
 2 0 8 #"wxmedia\0"
 4 1 34 #"(lib \"syntax-browser.ss\" \"mrlib\")\0"
-1 0 16 #"drscheme:number\0"
+1 0 36 #"(lib \"cache-image-snip.ss\" \"mrlib\")\0"
+1 0 68
+(
+ #"((lib \"image-core.ss\" \"mrlib\") (lib \"image-core-wxme.rkt\" \"mr"
+ #"lib\"))\0"
+) 1 0 16 #"drscheme:number\0"
 3 0 44 #"(lib \"number-snip.ss\" \"drscheme\" \"private\")\0"
 1 0 36 #"(lib \"comment-snip.ss\" \"framework\")\0"
 1 0 93
@@ -23,12 +28,7 @@
  #"pclass-wxme.ss\" \"framework\"))\0"
 ) 0 0 43 #"(lib \"collapsed-snipclass.ss\" \"framework\")\0"
 0 0 19 #"drscheme:sexp-snip\0"
-0 0 36 #"(lib \"cache-image-snip.ss\" \"mrlib\")\0"
-1 0 68
-(
- #"((lib \"image-core.ss\" \"mrlib\") (lib \"image-core-wxme.rkt\" \"mr"
- #"lib\"))\0"
-) 1 0 29 #"drscheme:bindings-snipclass%\0"
+0 0 29 #"drscheme:bindings-snipclass%\0"
 1 0 101
 (
  #"((lib \"ellipsis-snip.rkt\" \"drracket\" \"private\") (lib \"ellipsi"
@@ -37,7 +37,9 @@
 (
  #"((lib \"pict-snip.rkt\" \"drracket\" \"private\") (lib \"pict-snip.r"
  #"kt\" \"drracket\" \"private\"))\0"
-) 0 0 34 #"(lib \"bullet-snip.rkt\" \"browser\")\0"
+) 0 0 55
+#"((lib \"snip.rkt\" \"pict\") (lib \"snip-wxme.rkt\" \"pict\"))\0"
+1 0 34 #"(lib \"bullet-snip.rkt\" \"browser\")\0"
 0 0 25 #"(lib \"matrix.ss\" \"htdp\")\0"
 1 0 22 #"drscheme:lambda-snip%\0"
 1 0 29 #"drclickable-string-snipclass\0"
@@ -66,8 +68,8 @@
 1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 -1 -1 2 24
 #"framework:default-color\0"
 0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 255 255 255 -1 -1 2
-1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
+#"\0"
 0 -1 1 #"\0"
 1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 150 0 150 0 0 0 -1 -1 2 15
 #"text:ports out\0"
@@ -204,20 +206,8 @@
 1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 38
 #"plt:module-language:test-coverage-off\0"
 0 -1 1 #"\0"
-1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 1 0 0 0 0 0 0 255 165 0 0 0 0 -1 -1 4 1
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 1 0 0 0 0 0 0 255 165 0 0 0 0 -1 -1 0 1
 #"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
--1 -1 4 1 #"\0"
-0 -1 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 0 255 0 0 0 -1
--1 4 1 #"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 0 255 0 0 0 -1
--1 4 1 #"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 100 0 0 0 0 -1
--1 0 1 #"\0"
 0 75 10 #"Monospace\0"
 0.0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
 255 255 1 -1 2 1 #"\0"
@@ -236,6 +226,18 @@
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 0 0 0 0 0
 -1 -1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
+-1 -1 4 1 #"\0"
+0 -1 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 0 255 0 0
+0 -1 -1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 0 255 0 0
+0 -1 -1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 100 0 0 0
+0 -1 -1 4 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 1 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
 255 0 -1 -1 2 1 #"\0"
@@ -245,7 +247,7 @@
 0 0 24 29 1 #"\n"
 0 0 17 3 28 #";return the square of a list"
 0 0 24 29 1 #"\n"
-0 7         973 4           0 0           0 161 0 24 3 1 #"("
+0 9         973 21           0 0           0 161 0 24 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 24 3 2 #" ("
 0 0 14 3 12 #"sum-of-squre"
@@ -412,7 +414,7 @@
 0 0 17 3 66
 #";range function that provided lo and hi provides the range [lo,hi)"
 0 0 24 29 1 #"\n"
-0 7         433 4           0 0           0 71 0 24 3 1 #"("
+0 9         433 21           0 0           0 71 0 24 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 24 3 2 #" ("
 0 0 14 3 5 #"range"
@@ -486,7 +488,7 @@
 0           0 0 0 24 29 1 #"\n"
 0 0 17 3 37 #";define a function that flatten lists"
 0 0 24 29 1 #"\n"
-0 7         661 4           0 0           0 109 0 24 3 3 #"  ("
+0 9         661 21           0 0           0 109 0 24 3 3 #"  ("
 0 0 15 3 6 #"define"
 0 0 24 3 2 #" ("
 0 0 14 3 7 #"flatten"
@@ -598,7 +600,7 @@
 0           0 0 0 24 29 1 #"\n"
 0 0 17 3 11 #";qiuck sort"
 0 0 24 29 1 #"\n"
-0 7         895 4           0 0           0 148 0 24 3 1 #"("
+0 9         895 21           0 0           0 148 0 24 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 24 3 2 #" ("
 0 0 14 3 2 #"qs"
@@ -963,7 +965,7 @@
 0 0 24 3 2 #"))"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
-0 7         817 4           0 0           0 135 0 24 3 1 #"("
+0 9         817 21           0 0           0 135 0 24 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 24 3 2 #" ("
 0 0 14 3 4 #"pack"
